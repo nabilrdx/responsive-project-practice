@@ -44,6 +44,52 @@ a {
     font-weight: bold;
 }
 
+#side-drawer {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(21, 26, 39);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#side-drawer a {
+    color: white;
+    font-size: 2rem;
+}
+
+
+/* Using target to open the side drawer */
+
+#side-drawer:target {
+    display: block;
+}
+
+#side-drawer li {
+    margin: 1rem 0;
+}
+
+#side-drawer ul {
+    list-style: none;
+    margin: 0;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Hamburger menu CSS to show over the id target selector */
+
+#side-drawer header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2rem;
+    height: 5rem;
+}
+
 main h1 {
     text-align: center;
     font-size: 48px;
@@ -51,7 +97,7 @@ main h1 {
 }
 
 #latest-products {
-    width: 80%;
+    width: 60%;
     margin: 4rem auto;
 }
 
@@ -81,6 +127,10 @@ main h1 {
     text-align: center;
 }
 
+.food-item-content h2 {
+    margin: 0 0 1rem 0;
+}
+
 .btn {
     color: white;
     padding: 0.5rem 1.5rem;
@@ -91,4 +141,35 @@ main h1 {
 .btn:hover {
     font-weight: bold;
     color: black;
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+/* max-width means, if screen size is below or equal to value defined then the css should be applied */
+
+@media (max-width: 48rem) {
+    #latest-products ul {
+        grid-template-columns: 100%;
+    }
+    main h1 {
+        font-size: 1.5rem;
+    }
+    #main-header nav {
+        display: none;
+    }
+    .menu-btn {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 3rem;
+        width: 3rem;
+    }
+    .menu-btn span {
+        background-color: white;
+        height: 3px;
+        width: 100%;
+    }
 }
