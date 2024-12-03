@@ -51,7 +51,9 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
+    display: block;
+    transition: all 0.3s ease-in;
+    transform: translate(-100%);
 }
 
 #side-drawer a {
@@ -62,9 +64,10 @@ a {
 
 /* Using target to open the side drawer */
 
-#side-drawer:target {
+
+/* #side-drawer:target {
     display: block;
-}
+} */
 
 #side-drawer li {
     margin: 1rem 0;
@@ -145,6 +148,14 @@ main h1 {
 
 .menu-btn {
     display: none;
+}
+
+
+/* Trying to add the animation on hamburger menu click */
+
+.add {
+    transform: translate(0) !important;
+    /* display: block !important; */
 }
 
 
